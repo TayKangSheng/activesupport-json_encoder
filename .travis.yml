@@ -6,7 +6,6 @@ rvm:
 gemfile:
   - Gemfile
   - gemfiles/Gemfile-edge
-  - gemfiles/Gemfile-4-1-stable
 matrix:
   allow_failures:
     - gemfile: gemfiles/Gemfile-edge

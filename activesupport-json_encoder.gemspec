@@ -1,24 +1,24 @@
-# -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-Gem::Specification.new do |gem|
-  gem.name          = 'activesupport-json_encoder'
-  gem.version       = '1.1.0'
-  gem.authors       = ["David Heinemeier Hansson"]
-  gem.email         = ["david@loudthinking.com"]
-  gem.description   = 'A pure-Ruby ActiveSupport JSON encoder'
-  gem.summary       = 'A pure-Ruby ActiveSupport JSON encoder (extracted from core in Rails 4.1)'
-  gem.homepage      = 'https://github.com/rails/activesupport-json_encoder'
-  gem.license       = 'MIT'
+Gem::Specification.new do |spec|
+  spec.name = "activesupport-json_encoder"
+  spec.version = "1.3"
+  spec.authors = ["David Heinemeier Hansson", "Alistair McKinnell"]
+  spec.email = ["david@loudthinking.com"]
+  spec.description = "A pure-Ruby ActiveSupport JSON encoder"
+  spec.summary = "A pure-Ruby ActiveSupport JSON encoder (extracted from core in Rails 4.1)"
+  spec.homepage = "https://github.com/rails/activesupport-json_encoder"
+  spec.license = "MIT"
 
-  gem.required_ruby_version = '>= 1.9.3'
+  spec.required_ruby_version = ">= 2.6"
 
-  gem.files         = Dir['MIT-LICENSE', 'README.md', 'lib/**/*']
-  gem.test_files    = Dir['test/**/*.rb']
-  gem.require_paths = ['lib']
+  spec.files = Dir["MIT-LICENSE", "README.md", "lib/**/*"]
+  spec.test_files = Dir["test/**/*.rb"]
+  spec.require_paths = ["lib"]
 
-  gem.add_dependency 'activesupport', '>= 4.1.0'
+  spec.add_runtime_dependency "rails", ">= 6.0", "< 7.0"
 
-  gem.add_development_dependency 'rake'
+  spec.add_development_dependency "appraisal", "~> 2.4"
+  spec.add_development_dependency "rake", "~> 13.0"
 end
